@@ -1,0 +1,20 @@
+{
+  "name": "tinderbackend",
+  "version": "1.0.0",
+  "description": "tinder practice",
+  "main": "index.js",
+  "scripts": {
+    "start":"node src/app.js",
+    "dev":"nodemon src/app.js"
+  },
+  "keywords": [
+    "nodejs",
+    "jsvascript",
+    "backend"
+  ],
+  "author": "Rupesh Kadam",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
