@@ -3,8 +3,10 @@ const express = require("express")
 const app = express();
 
 
-app.get("/user",(req,res) => {
-    res.send({"firstname":"rupesh"})
+app.get("/user/:userid/:uniqueid",(req,res) => {
+    console.log(req.query);
+    console.log(req.params);
+    res.send({"first.name":"rupesh"})
 })
 app.post("/user",(req,res) => {
     res.send("saved succesfully")
