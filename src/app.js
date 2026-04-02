@@ -3,14 +3,12 @@ const connectDB = require("./config/database")
 const app = express();
 const User = require('./models/user')
 
-
+app.use(express.json())
 app.post('/signup', async (req, res) => {
-    const userObj = {
-        firstName: 'Rusddfspesh',
-        lastName: 'Kadam',
-        emailId: 'rk@gmail.com',
-        password: 'test123'
-    }
+    
+
+    console.log(req.body);
+    const userObj = req.body
 
     const user = new User(userObj)
 
@@ -35,5 +33,5 @@ connectDB().then(() => {
     })
 }).catch(err => {
     console.log(err, 'database connection error.');
-})
+}) 
 
